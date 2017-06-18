@@ -222,7 +222,7 @@
 				</div>
 				<div class="section notopmargin nobottommargin">
 					<div class="heading-block center">
-						<h3>Interested in <span>closed beta</span>?</h3>
+						<h3>Interested in our <span>closed beta</span>?</h3>
 					</div>
 					<div class="subscribe-widget">
 						<div class="widget-subscribe-form-result"></div>
@@ -231,7 +231,7 @@
 								<span class="input-group-addon"><i class="icon-email2"></i></span>
 								<input type="email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
 								<span class="input-group-btn">
-									<button class="btn btn-default" onclick="registerInterest()" type="submit">Register Interest Now</button>
+									<button class="btn btn-default" data-notify-position="bottom-right" data-notify-type="success" data-notify-msg="Email registered. We will keep you updated." data-notify-close="true" onclick="registerInterest(this)" type="submit">Register Interest</button>
 								</span>
 							</div>
 						</form>
@@ -286,13 +286,13 @@
 		};
 		firebase.initializeApp(config);
 
-		function registerInterest() {
+		function registerInterest(element) {
 			var email = document.getElementsByName('widget-subscribe-form-email')[0].value;
 			var ref = firebase.database().ref('emails');
 			var id = ref.push().key;
 			ref.update({
 				[id]: email
-			}).then(() => alert('Thanks for registering your interest with us. We will notify you when we are ready.'));
+			}).then(() => SEMICOLON.widget.notifications(element));
 		}
 	</script>
 </body>
