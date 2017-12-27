@@ -186,15 +186,15 @@ h1 { font-size: 48px; }
 
 h2 { font-size: 40px; }
 
-h3 { font-size: 32px; }
+h3 { font-size: 28px; }
 
-h4 { font-size: 28px; }
+h4 { font-size: 26px; }
 
 h5 { font-size: 24px; }
 
 h6 { font-size: 18px; }
 
-p { font-size: 18px; }
+p { font-size: 14px; }
 
 h4 { font-weight: 600; }
 
@@ -3522,7 +3522,7 @@ body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 
 .content-wrap {
 	position: relative;
-	padding: 0 0 80px;
+	padding: 40px 0 40px;
 }
 
 #content .container { position: relative; }
@@ -6693,7 +6693,6 @@ body:not(.device-touch) .button {
 	font-weight: 400;
 	letter-spacing: 1px;
 	font-family: 'Roboto Slab', serif;
-	font-style: italic;
 	text-transform: none;
 }
 
